@@ -11,6 +11,7 @@ window.addEventListener('load', () => {
     canvas.width  = MAP_W * TILE_SIZE;
     canvas.height = MAP_H * TILE_SIZE;
     GS = buildState(canvas, canvas.getContext('2d'), 1, null);
+    GS.status = 'title';   // hold on title screen until Enter is pressed
     redraw();
     showOverlay(true, {
         title: 'DUNGEON CRAWLER',
