@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dungeon Crawler</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-wrapper">
+        <div id="canvas-container">
+            <canvas id="gameCanvas"></canvas>
+            <div id="overlay"></div>
+        </div>
+        <div id="sidebar">
+            <div class="game-title">DUNGEON<br>CRAWLER</div>
+            <div id="stats-panel"></div>
+            <div id="inventory-panel"></div>
+            <div id="message-log"></div>
+            <div id="controls-help">
+                <div class="panel-title">CONTROLS</div>
+                <div class="ctrl-row"><kbd>&#8593;&#8595;&#8592;&#8594;</kbd><span>Move / Attack</span></div>
+                <div class="ctrl-row"><kbd>WASD</kbd><span>Move / Attack</span></div>
+                <div class="ctrl-row"><kbd>U</kbd><span>Use potion</span></div>
+                <div class="ctrl-row"><kbd>Z</kbd><span>Use scroll</span></div>
+                <div class="ctrl-row"><kbd>&gt;</kbd><span>Descend stairs</span></div>
+                <div class="ctrl-row"><kbd>Enter</kbd><span>New game</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load order matters: constants first, then systems, then orchestrator -->
+    <script src="js/dungeon.js"></script>
+    <script src="js/fov.js"></script>
+    <script src="js/items.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/combat.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
