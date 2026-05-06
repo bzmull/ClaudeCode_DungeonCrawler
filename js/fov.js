@@ -61,7 +61,7 @@ function hasLOS(tiles, x0, y0, x1, y1) {
     while (x !== x1 || y !== y1) {
         const e2 = 2 * err;
         if (e2 > -dy) { err -= dy; x += sx; }
-        if (e2 <  dx) { err += dy; y += sy; }
+        if (e2 <  dx) { err += dx; y += sy; }
 
         if (x < 0 || x >= MAP_W || y < 0 || y >= MAP_H) return false;
 
